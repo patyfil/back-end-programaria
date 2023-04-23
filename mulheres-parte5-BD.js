@@ -1,7 +1,10 @@
-// ALTERAR OS DADOS
+// CONECTANDO O BANCO DE DADOS MONGODB
 const express = require("express") //aqui estou iniciando o express
 const router = express.Router() //aqui estou configurando a primeira parte da rota
 const { v4: uuidv4 } = require('uuid')
+const conectaBancoDeDados = require('./bancoDeDados') //aqui estou ligando ao arquivo bancoDeDados
+conectaBancoDeDados() // estou chamando a função que conecta o banco de dados
+
 const app = express() //aqui estou iniciando o app
 app.use(express.json())
 const porta = 3333 //aqui estou criando a porta
@@ -70,7 +73,7 @@ function corrigeMulher(request, response) {
     response.json(mulheres)
 }
 
-//DELETE
+//DELETA OS DADOS
 function deletaMulher(request, response) {
     function todasMenosEla(mulher) {
         if (mulher.id !== request.params.id) {
