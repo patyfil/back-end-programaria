@@ -54,11 +54,11 @@ async function corrigeMulher(request, response) {
         }
     
         if (request.body.imagem) {
-            mulherEncontrada = request.body.imagem
+            mulherEncontrada.imagem = request.body.imagem
         }
 
         if (request.body.citacao) {
-            mulherEncontrada = request.body.citacao
+            mulherEncontrada.citacao = request.body.citacao
         }
 
         const mulherAtualizadaNoBancoDeDados = await mulherEncontrada.save()
@@ -69,7 +69,7 @@ async function corrigeMulher(request, response) {
     }
 }
 
-//DELETE
+//DELETA OS DADOS
 async function deletaMulher(request, response) {
     try {
         await Mulher.findByIdAndDelete(request.params.id)
@@ -79,7 +79,7 @@ async function deletaMulher(request, response) {
     }
 }
 
-
+// Configurações do APP
 app.use(router.get('/mulheres', mostraMulheres)) //configurei rota GET /mulheres
 app.use(router.post('/mulheres', criaMulher)) //configurei rota POST /mulheres
 app.use(router.patch('/mulheres/:id', corrigeMulher)) // configurei rota PATCH /mulheres/:id

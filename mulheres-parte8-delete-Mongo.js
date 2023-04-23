@@ -1,4 +1,4 @@
-// Salvando os dados no MongoDB
+// Deletando os dados no MongoDB
 const express = require("express") //aqui estou iniciando o express
 const router = express.Router() //aqui estou configurando a primeira parte da rota
 const conectaBancoDeDados = require('./bancoDeDados') //aqui estou ligando ao arquivo bancoDeDados
@@ -68,14 +68,13 @@ async function corrigeMulher(request, response) {
 }
 
 //DELETA OS DADOS
-function deletaMulher(request, response) {
-    function todasMenosEla(mulher) {
-        if (mulher.id !== request.params.id) {
-            return mulher
-        }
+async function deletaMulher(request, response) {
+    try {
+        await Mulher.findByIdAndDelete(request.params.id)
+        response.json({ messagem: 'Mulher deletada com sucesso!'})
+    } catch(erro) {
+        console.log(erro)
     }
-    const mulheresQueFicaram = mulheres.filter(todasMenosEla)
-    response.json(mulheresQueFicaram)
 }
 
 // Configurações do APP
