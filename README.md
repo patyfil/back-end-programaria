@@ -1,5 +1,5 @@
-# Curso Online Eu ProgrAmo | BE1 | Turma 01
-## Professora: Simara Conceição  
+# [Curso Online Eu ProgrAmo | BE1 | Turma 01](https://euprogramo.thinkific.com/courses/curso-online-eu-programo-be1-turma-01?utm_source=LinkedIn&utm_medium=social&utm_campaign=student-social-share)
+## Professora: [Simara Conceição](https://www.linkedin.com/in/simaraconceicao/)  
 
 ![Thumbnails-Cursos-BE1](https://user-images.githubusercontent.com/41968938/233869563-e0fc74a3-18e6-4c5b-8bf1-643359f0abf9.png)
 
