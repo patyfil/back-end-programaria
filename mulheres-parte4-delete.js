@@ -1,4 +1,4 @@
-// ALTERAR OS DADOS
+// DELETAR OS DADOS
 const express = require("express") //aqui estou iniciando o express
 const router = express.Router() //aqui estou configurando a primeira parte da rota
 const { v4: uuidv4 } = require('uuid')
@@ -70,7 +70,7 @@ function corrigeMulher(request, response) {
     response.json(mulheres)
 }
 
-//DELETE
+//DELETE OS DADOS
 function deletaMulher(request, response) {
     function todasMenosEla(mulher) {
         if (mulher.id !== request.params.id) {

@@ -13,21 +13,21 @@ const mulheres = [
         nome: 'Simara Conceição',
         imagem: 'https://github.com/simaraconceicao.png',
         minibio: 'Desenvolvedora e Instrutora',
-
+    
     },
     {
         id: '2',
         nome: 'Iana Chan',
         imagem: 'https://bit.ly/3JCXBqP',
         minibio: 'Fundadora da PrograMaria',
-
+    
     },
     {
         id: '3',
         nome: 'Nina da Hora',
         imagem: 'https://bit.ly/3FKpFaz',
         minibio: 'Hacker antirracista',
-
+    
     },
 ]
 
@@ -69,23 +69,10 @@ function corrigeMulher(request, response) {
 
     response.json(mulheres)
 }
-
-//DELETE
-function deletaMulher(request, response) {
-    function todasMenosEla(mulher) {
-        if (mulher.id !== request.params.id) {
-            return mulher
-        }
-    }
-    const mulheresQueFicaram = mulheres.filter(todasMenosEla)
-    response.json(mulheresQueFicaram)
-}
-
 // Configurações do APP
 app.use(router.get('/mulheres', mostraMulheres)) //configurei rota GET /mulheres
 app.use(router.post('/mulheres', criaMulher)) //configurei rota POST /mulheres
 app.use(router.patch('/mulheres/:id', corrigeMulher)) // configurei rota PATCH /mulheres/:id
-app.use(router.delete('/mulheres/:id', deletaMulher)) // configurei rota DELETE /mulheres/:id
 
 //PORTA
 function mostraPorta() {
