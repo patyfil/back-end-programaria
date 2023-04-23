@@ -1,4 +1,4 @@
-// MOSTRA OS DADOS
+// LÊ OS DADOS
 const express = require("express")
 const router = express.Router()
 

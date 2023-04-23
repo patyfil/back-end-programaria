@@ -70,7 +70,7 @@ function corrigeMulher(request, response) {
     response.json(mulheres)
 }
 
-//DELETE OS DADOS
+//DELETA OS DADOS
 function deletaMulher(request, response) {
     function todasMenosEla(mulher) {
         if (mulher.id !== request.params.id) {
