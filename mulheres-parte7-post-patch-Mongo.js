@@ -1,4 +1,4 @@
-// Salvando os dados no MongoDB
+// Salvando os dados no MongoDB (Criando e alterando)
 const express = require("express") //aqui estou iniciando o express
 const router = express.Router() //aqui estou configurando a primeira parte da rota
 const conectaBancoDeDados = require('./bancoDeDados') //aqui estou ligando ao arquivo bancoDeDados

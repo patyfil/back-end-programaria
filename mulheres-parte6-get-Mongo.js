@@ -1,4 +1,4 @@
-// Salvando os dados no MongoDB
+// Lendo os dados no MongoDB
 const express = require("express") //aqui estou iniciando o express
 const router = express.Router() //aqui estou configurando a primeira parte da rota
 const { v4: uuidv4 } = require('uuid')
